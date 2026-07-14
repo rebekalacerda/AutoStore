@@ -61,9 +61,6 @@ O chatbot consulta o catálogo da concessionária e responde apenas com informa�
 ---
 
 ## 🚘 Obrigada por visitar o projeto!
-<p align="center">
-  <img src="https://tenor.com/bJ44O.gif" width="100%">
-</p>
 
 <p align="center">
 Desenvolvido por <strong>Rebeka Lacerda</strong> 💙
