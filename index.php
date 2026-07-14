@@ -20,6 +20,14 @@
                 Explorar Catálogo
             </a>
 
+            <div class="hero-beneficios">
+
+                <span>🚗 15 veículos cadastrados</span>
+
+                 <span>🤖 Recomendações com IA</span>
+
+            </div>
+
         </div>
 
         <div class="hero-image">

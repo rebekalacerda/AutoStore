@@ -109,19 +109,45 @@ nav a{
 
 .btn{
 
-    display:inline-block;
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     padding:15px 30px;
+
     background:#2563EB;
+
     color:#fff;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
     text-decoration:none;
-    border-radius:10px;
-    transition:.3s;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    transition:all .3s ease;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.25);
 
 }
 
 .btn:hover{
 
-    transform:translateY(-3px);
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 28px rgba(37,99,235,.35);
 
 }
 
@@ -134,6 +160,36 @@ nav a{
 .hero-image img{
 
     width:100%;
+
+}
+
+.hero-beneficios{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+.hero-beneficios span{
+
+    background:white;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+
+    font-size:14px;
+
+    font-weight:500;
 
 }
 
@@ -311,6 +367,7 @@ footer{
 .catalogo h1{
     margin-bottom: 40px;
     font-size: 42px;
+    text-align: center;
 }
 
 .catalogo .container{
@@ -446,10 +503,12 @@ margin-top:0;
 .form-pesquisa{
 
     display:flex;
-    justify-content:center;
-    gap:15px;
-    margin-bottom:50px;
     flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+
+    margin:40px auto 50px;
 
 }
 
@@ -484,14 +543,30 @@ margin-top:0;
 
 a.filtro{
 
-    display:inline-block;
-    padding:12px 20px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:100px;
+
+    height:45px;
+
+    padding:0 22px;
+
     background:#fff;
+
     border:2px solid #2563EB;
+
     border-radius:30px;
-    text-decoration:none !important;
-    color:#2563EB !important;
+
+    text-decoration:none;
+
+    color:#2563EB;
+
     font-weight:600;
+
     transition:.3s;
 
 }
@@ -499,8 +574,23 @@ a.filtro{
 a.filtro:hover{
 
     background:#2563EB;
-    color:white !important;
 
+    color:#fff;
+
+}
+
+.filtros {
+     display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin:20px 0 35px;
 }
 
 .chat-janela{
