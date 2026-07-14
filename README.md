@@ -63,7 +63,7 @@ O chatbot consulta o catálogo da concessionária e responde apenas com informa�
 ## 🚘 Obrigada por visitar o projeto!
 
 <p align="center">
-  <img src="URL_DO_GIF" width="350">
+  <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif" width="350">
 </p>
 
 <p align="center">
