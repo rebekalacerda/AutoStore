@@ -60,8 +60,6 @@ O chatbot consulta o catálogo da concessionária e responde apenas com informa�
 
 ---
 
-## 🚘 Obrigada por visitar o projeto!
-
 <p align="center">
 Desenvolvido por <strong>Rebeka Lacerda</strong> 💙
 </p>
