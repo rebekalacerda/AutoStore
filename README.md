@@ -61,8 +61,9 @@ O chatbot consulta o catálogo da concessionária e responde apenas com informa�
 ---
 
 ## 🚘 Obrigada por visitar o projeto!
-
-<div class="tenor-gif-embed" data-postid="23336592" data-share-method="host" data-aspect-ratio="1.04575" data-width="100%"><a href="https://tenor.com/view/mimibubu-gif-23336592">Mimibubu Sticker</a>from <a href="https://tenor.com/search/mimibubu-stickers">Mimibubu Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<p align="center">
+  <img src="https://tenor.com/bJ44O.gif" width="100%">
+</p>
 
 <p align="center">
 Desenvolvido por <strong>Rebeka Lacerda</strong> 💙
