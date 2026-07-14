@@ -58,6 +58,14 @@ A AutoIA utiliza a API Gemini juntamente com Embeddings e RAG para responder per
 
 O chatbot consulta o catálogo da concessionária e responde apenas com informações presentes na base de dados, evitando recomendações de veículos inexistentes.
 
-## 👩‍💻 Desenvolvido por
+---
 
-Rebeka Lacerda
+## 🚘 Obrigada por visitar o projeto!
+
+<p align="center">
+  <img src="URL_DO_GIF" width="350">
+</p>
+
+<p align="center">
+Desenvolvido por <strong>Rebeka Lacerda</strong> 💙
+</p>
