@@ -37,20 +37,12 @@ O sistema permite pesquisar veículos, visualizar informações detalhadas, regi
 ## 🚀 Como executar
 
 1. Clone o repositório
-
-git clone ...
-
 2. Coloque a pasta dentro do XAMPP
-
-3. Inicie Apache e MySQL
-
-4. Importe o banco de dados
-
-5. Configure a chave da API Gemini em config.php
-
-6. Acesse:
-
-http://localhost/AutoStore
+3. Inicie o Apache e o MySQL
+4. Importe o arquivo `database/autostore.sql` no phpMyAdmin
+5. Configure a chave da API Gemini em `config.php`
+6. Execute `gerar_embeddings.php` para gerar os embeddings dos veículos
+7. Acesse `http://localhost/AutoStore`.
 
 ## 🤖 AutoIA
 
@@ -76,6 +68,50 @@ O chatbot consulta o catálogo da concessionária e responde apenas com informa�
 
 - Chatbot -
 <img width="410" height="639" alt="Captura de Tela 2026-07-14 às 14 14 18" src="https://github.com/user-attachments/assets/8b4f6925-481a-4f6d-9dfb-3f8979933e09" />
+
+## 🔑 Variáveis de ambiente
+
+Crie um arquivo `config.php` na raiz do projeto com a chave da API Gemini:
+
+```php
+<?php
+
+define("GEMINI_API_KEY", "SUA_CHAVE_AQUI");
+```
+
+A chave pode ser obtida no Google AI Studio.
+
+## 📥 Seed / Ingestão dos dados
+
+Após importar o banco de dados, execute os scripts abaixo:
+
+1. `importar_carros.php`
+   - Responsável por cadastrar os veículos no banco.
+
+2. `gerar_embeddings.php`
+   - Gera os embeddings dos veículos utilizando a API Gemini e os armazena no banco de dados.
+
+Esses embeddings são utilizados pelo mecanismo RAG para recuperar os veículos mais relevantes antes da geração da resposta da IA.
+
+## ✅ Roteiro de validação
+
+Após iniciar o projeto, realize os seguintes testes:
+
+- Acessar o catálogo de veículos.
+- Pesquisar por montadora ou modelo.
+- Filtrar por categoria.
+- Abrir a página de detalhes de um veículo.
+- Trocar as imagens pela galeria de miniaturas.
+- Registrar um lead pelo formulário de interesse.
+- Abrir o chatbot e testar perguntas como:
+
+  - Qual é o carro mais barato?
+  - Qual SUV mais barato?
+  - Quero um carro para família até R$ 150 mil.
+  - Vocês têm Renault Kwid?
+
+Resultado esperado:
+- O chatbot deve responder utilizando apenas veículos cadastrados no catálogo e informar quando um modelo não estiver disponível.
 
 ---
 
