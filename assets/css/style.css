@@ -719,7 +719,7 @@ a.filtro:hover {
 
 }
 
-modal {
+.modal {
 
     display: none;
     position: fixed;

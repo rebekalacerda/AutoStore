@@ -8,3 +8,11 @@ function trocarImagem(img) {
 
     img.classList.add("ativa");
 }
+
+function abrirFormulario() {
+    document.getElementById("modalLead").style.display = "flex";
+}
+
+function fecharFormulario() {
+    document.getElementById("modalLead").style.display = "none";
+}
