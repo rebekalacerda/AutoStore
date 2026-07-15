@@ -169,6 +169,7 @@ usort($resultados, function($a,$b){
 // pegar os 3 melhores
 
 $resultados = array_filter($resultados, function($item){
+
     return $item["similaridade"] > 0.45;
 });
 
