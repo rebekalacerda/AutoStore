@@ -21,59 +21,59 @@ const enviar = document.getElementById("enviarPergunta");
 enviar.onclick = enviarMensagem;
 
 document
-.getElementById("pergunta")
-.addEventListener("keypress",function(e){
+    .getElementById("pergunta")
+    .addEventListener("keypress", function (e) {
 
-    if(e.key==="Enter"){
+        if (e.key === "Enter") {
 
-        enviarMensagem();
+            enviarMensagem();
 
-    }
-
-});
-
-function enviarMensagem(){
-
-    let pergunta = document.getElementById("pergunta").value;
-
-    if(pergunta=="") return;
-
-    adicionarMensagem(pergunta,"usuario");
-
-    document.getElementById("pergunta").value="";
-
-    adicionarMensagem("Pensando...","ia","digitando");
-
-    fetch("chatbot.php",{
-
-        method:"POST",
-
-        headers:{
-            "Content-Type":"application/x-www-form-urlencoded"
-        },
-
-        body:"pergunta="+encodeURIComponent(pergunta)
-
-    })
-
-    .then(r=>r.json())
-
-    .then(res=>{
-
-        document.querySelector(".digitando").remove();
-
-        adicionarMensagem(res.resposta,"ia");
+        }
 
     });
 
+function enviarMensagem() {
+
+    let pergunta = document.getElementById("pergunta").value;
+
+    if (pergunta == "") return;
+
+    adicionarMensagem(pergunta, "usuario");
+
+    document.getElementById("pergunta").value = "";
+
+    adicionarMensagem("Pensando...", "ia", "digitando");
+
+    fetch("chatbot.php", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+
+        body: "pergunta=" + encodeURIComponent(pergunta)
+
+    })
+
+        .then(r => r.json())
+
+        .then(res => {
+
+            document.querySelector(".digitando").remove();
+
+            adicionarMensagem(res.resposta, "ia");
+
+        });
+
 }
 
-function adicionarMensagem(texto,tipo,classe=""){
+function adicionarMensagem(texto, tipo, classe = "") {
 
     const chat = document.getElementById("chatMensagens");
 
     chat.innerHTML +=
-    `<div class="mensagem ${tipo} ${classe}">
+        `<div class="mensagem ${tipo} ${classe}">
         ${texto}
     </div>`;
 
@@ -81,13 +81,13 @@ function adicionarMensagem(texto,tipo,classe=""){
 
 }
 
-function abrirFormulario(){
+function abrirFormulario() {
 
     document.getElementById("modalLead").style.display = "flex";
 
 }
 
-function fecharFormulario(){
+function fecharFormulario() {
 
     document.getElementById("modalLead").style.display = "none";
 
@@ -99,32 +99,32 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const formLead = document.getElementById("formLead");
 
-    if(formLead){
+    if (formLead) {
 
-        formLead.addEventListener("submit", function(e){
+        formLead.addEventListener("submit", function (e) {
 
             e.preventDefault();
 
             const dados = new FormData(this);
 
-            fetch("salvar_lead.php",{
-                method:"POST",
-                body:dados
+            fetch("salvar_lead.php", {
+                method: "POST",
+                body: dados
             })
-            .then(res => res.json())
-            .then(res => {
+                .then(res => res.json())
+                .then(res => {
 
-                alert(res.mensagem);
+                    alert(res.mensagem);
 
-                if(res.sucesso){
+                    if (res.sucesso) {
 
-                    this.reset();
+                        this.reset();
 
-                    fecharFormulario();
+                        fecharFormulario();
 
-                }
+                    }
 
-            });
+                });
 
         });
 

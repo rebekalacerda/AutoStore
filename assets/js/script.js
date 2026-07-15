@@ -1,8 +1,8 @@
-function trocarImagem(img){
+function trocarImagem(img) {
 
     document.getElementById("imagemPrincipal").src = img.src;
 
-    document.querySelectorAll(".thumb").forEach(function(item){
+    document.querySelectorAll(".thumb").forEach(function (item) {
         item.classList.remove("ativa");
     });
 
